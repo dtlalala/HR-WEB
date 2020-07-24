@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cc.dt.hrweb.web.busi.mapper.DtTestMapper">
+    <resultMap id="BaseResultMap" type="cc.dt.hrweb.web.busi.entity.DtTest">
+        <!--
+          WARNING - @mbg.generated
+        -->
+        <id column="ID" jdbcType="INTEGER" property="id"/>
+        <result column="NAME" jdbcType="DECIMAL" property="name"/>
+        <result column="AGE" jdbcType="VARCHAR" property="age"/>
+        <result column="TEL" jdbcType="VARCHAR" property="tel"/>
+        <result column="ADDRESS" jdbcType="VARCHAR" property="address"/>
+    </resultMap>
+
+<!-- mapper.xml文件要放在resources目录下面就会生效  -->
+
+
+    <select id="selectAll" resultMap="BaseResultMap">
+        select * from dt_test
+    </select>
+
+
+</mapper>
